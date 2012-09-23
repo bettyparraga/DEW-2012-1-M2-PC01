@@ -1,5 +1,9 @@
 Tienda::Application.routes.draw do
+<<<<<<< HEAD
   resources :clientes
+=======
+  resources :productos
+>>>>>>> 5823346bd742ae1ae895669432e6d30c5835613a
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
