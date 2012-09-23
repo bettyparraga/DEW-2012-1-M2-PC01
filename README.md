@@ -7,4 +7,5 @@ Alumnos participantes
 =====================
 
 Betty Párraga
+
 Jorge Cruz
