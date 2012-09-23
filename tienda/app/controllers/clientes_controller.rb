@@ -1,12 +1,18 @@
 class ClientesController < ApplicationController
   # GET /clientes
   # GET /clientes.json
+  
+  def agregar_producto
+      @cliente = Cliente.find(params[:id])
+  end
+
   def index
     @clientes = Cliente.all
 
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @clientes }
+    
     end
   end
 
