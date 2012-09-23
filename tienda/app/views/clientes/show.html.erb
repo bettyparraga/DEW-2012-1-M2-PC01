@@ -15,6 +15,17 @@
   <%= @cliente.num_tarj %>
 </p>
 
+<table>
+	<% @cliente.productos.each do |cliente| %>
+		<tr>
+			<td><%= producto.codigo  %></td>
+			<td><%= producto.descripcion  %></td>
+			<td><%= producto.precio  %></td>
+		</tr>
 
+	<% end %>
+</table>
+
+<%= link_to 'Agregar producto', agregar_producto_usuario_path(@cliente) %>
 <%= link_to 'Edit', edit_cliente_path(@cliente) %> |
 <%= link_to 'Back', clientes_path %>
