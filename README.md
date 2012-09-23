@@ -6,4 +6,5 @@ Una tienda en línea desea una aplicación que permita a un usuario suscribirse 
 Alumnos participantes
 
 Betty Párraga
+
 Jorge Cruz
