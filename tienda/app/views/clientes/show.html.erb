@@ -14,21 +14,31 @@
   <b>Num tarj:</b>
   <%= @cliente.num_tarj %>
 </p>
-
+<b>Lista de productos del cliente</b>
 <table>
-      <td><% n_total=0 %></td>
-	<% @cliente.productos.each do |producto| %>
-      <% n_total = n_total + producto.precio %>
-		<tr>
-      <td><%= producto.codigo %></td>
-      <td><%= producto.descripcion %></td>
-      <td><%= producto.precio %></td>
-		</tr>
+              <tr>
+    <td><b>Código</b></td>
+    <td><b>Descripción</b></td>
+    <td><b>Precio</b></td>
+              </tr>
+    <% n_total=0 %>
+      <% @cliente.productos.each do |producto| %>
+    <% n_total = n_total + producto.precio %>
+              <tr>
+    <td><%= producto.codigo %></td>
+    <td><%= producto.descripcion %></td>
+    <td align='right'><%= producto.precio %></td>
+              </tr>
 
-	<% end %>
+      <% end %>
+              <tr>
+    <td><b></b></td>
+    <td><b><b>Total: </b></b></td>
+    <td align='right'><b><%= n_total %>
+</b></td>
+              </tr>
 </table>
-  Total: <%= n_total %>
-<br>
+
 <%= link_to 'Agregar producto', add_producto_cliente_path(@cliente) %>
 
 <%= link_to 'Edit', edit_cliente_path(@cliente) %> |

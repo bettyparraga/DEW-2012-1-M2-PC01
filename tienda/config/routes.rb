@@ -1,4 +1,5 @@
 Tienda::Application.routes.draw do
+  root :to => "clientes#index"
   resources :clientes do
       member do
         get "add_producto"
