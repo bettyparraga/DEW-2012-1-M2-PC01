@@ -16,7 +16,9 @@
 </p>
 
 <table>
+      <td><% n_total=0 %></td>
 	<% @cliente.productos.each do |producto| %>
+      <% n_total = n_total + producto.precio %>
 		<tr>
       <td><%= producto.codigo %></td>
       <td><%= producto.descripcion %></td>
@@ -25,7 +27,8 @@
 
 	<% end %>
 </table>
-
+  Total: <%= n_total %>
+<br>
 <%= link_to 'Agregar producto', add_producto_cliente_path(@cliente) %>
 
 <%= link_to 'Edit', edit_cliente_path(@cliente) %> |
