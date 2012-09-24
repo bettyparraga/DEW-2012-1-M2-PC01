@@ -1,4 +1,10 @@
 Tienda::Application.routes.draw do
+  resources :clientes do
+      member do
+        get "add_producto"
+      end
+  end
+  
   resources :cliente_productos
 
   resources :clientes

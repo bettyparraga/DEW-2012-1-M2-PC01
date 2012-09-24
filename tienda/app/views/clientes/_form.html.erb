@@ -1,29 +1,18 @@
-<%= form_for(@cliente) do |f| %>
-  <% if @cliente.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@cliente.errors.count, "error") %> prohibited this cliente from being saved:</h2>
+<%= simple_form_for(@cliente) do |f| %>
 
-      <ul>
-      <% @cliente.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
+  <div class="inputs">
     <%= f.label :nombre %><br />
-    <%= f.text_field :nombre %>
+    <%= f.input :nombre %>
   </div>
   <div class="field">
     <%= f.label :apellido %><br />
-    <%= f.text_field :apellido %>
+    <%= f.input :apellido %>
   </div>
   <div class="field">
     <%= f.label :num_tarj %><br />
-    <%= f.text_field :num_tarj %>
+    <%= f.input :num_tarj %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.button :submit %>
   </div>
 <% end %>

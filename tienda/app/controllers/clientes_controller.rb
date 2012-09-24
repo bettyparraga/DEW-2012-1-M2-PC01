@@ -2,7 +2,7 @@ class ClientesController < ApplicationController
   # GET /clientes
   # GET /clientes.json
   
-  def agregar_producto
+  def add_producto
       @cliente = Cliente.find(params[:id])
   end
 
